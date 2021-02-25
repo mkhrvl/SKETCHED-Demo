@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: ce353b94e1c2c964585489a829f45495
+  - enabled: 1
+    path: Assets/Scenes/Prologue.unity
+    guid: 64fc08864462d2b40bf1df10afda6e79
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 71eeac35521e98e48809325a897993b6
+  - enabled: 1
+    path: Assets/Scenes/TutorialExtension.unity
+    guid: d45a399bb98cde945aaf8e54ca8d8d1f
+  - enabled: 1
+    path: Assets/Scenes/Hallway1.unity
+    guid: e969c32fb8bb47241885f6570ae71bff
+  - enabled: 1
+    path: Assets/Scenes/BossFight1.unity
+    guid: 6a7d381b72196bf45a884d99686a6f7e
+  - enabled: 1
+    path: Assets/Scenes/Hallway2.unity
+    guid: dbf4472b7f1c2d9418db1d39ed2f052c
+  - enabled: 1
+    path: Assets/Scenes/Boss Fight Reference.unity
+    guid: 5614ddd127fd73341b7fa16103a601d2
+  m_configObjects: {}
