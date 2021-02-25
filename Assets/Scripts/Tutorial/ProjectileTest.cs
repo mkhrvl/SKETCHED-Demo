@@ -11,16 +11,19 @@ public class ProjectileTest : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    public float bulletForce = 8f;
-    public float attackInterval = 1f;
+    private float bulletForce;
+    private float attackInterval;
 
     private float resetInterval;
 
     void Start() { 
+        bulletForce = 9f;
+        attackInterval = 0.3f;
+
         resetInterval = attackInterval;
     }
 
-    void Update() {
+    void FixedUpdate() {
         if(PlayerPrefs.GetInt("tutorialComplete") != 1) {
             
             attackInterval -= Time.fixedDeltaTime; 

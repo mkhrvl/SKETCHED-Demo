@@ -275,6 +275,42 @@ Tilemap:
   m_GameObject: {fileID: 242070428}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: -15, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -16, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 7
+      m_TileSpriteIndex: 7
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -15, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 7
+      m_TileSpriteIndex: 7
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -15, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
   - first: {x: -8, y: 14, z: 0}
     second:
       serializedVersion: 2
@@ -406,6 +442,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: a824b2c92667b294abe8930db8f83fb9, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 0d5eabd07193fb443a4687fbbe9460eb, type: 2}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: 26da981e95e87e44d9c1d9375343af24, type: 2}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: 76d378039a4055f42ac0077aa18eaac6, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 2
     m_Data: {fileID: -1396135034660978453, guid: 4a6bb787601ab5941984bf8fa737fb1c,
@@ -424,8 +464,14 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 8832363126130176641, guid: ffbb5ba04ff18734094c65ee3942f87a,
       type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: -8377130690987618698, guid: 5266d1fa87bb2f14d8ea987a5c03afc8,
+      type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: 7223950226953391895, guid: 5266d1fa87bb2f14d8ea987a5c03afc8,
+      type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 13
+  - m_RefCount: 17
     m_Data:
       e00: 1
       e01: 0
@@ -444,13 +490,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 13
+  - m_RefCount: 17
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -14, y: -2, z: 0}
-  m_Size: {x: 14, y: 23, z: 1}
+  m_Origin: {x: -16, y: -2, z: 0}
+  m_Size: {x: 16, y: 23, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -757,7 +803,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 7.034243, y: 19.642107}
+  m_Offset: {x: 7.034243, y: 19.515518}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -768,7 +814,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.7115164, y: 2.1045723}
+  m_Size: {x: 5.7115164, y: 1.8513947}
   m_EdgeRadius: 0
 --- !u!61 &486918319
 BoxCollider2D:
@@ -4587,6 +4633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1556308038}
   - component: {fileID: 1556308037}
+  - component: {fileID: 1556308039}
   m_Layer: 0
   m_Name: Checkpoint
   m_TagString: Checkpoint
@@ -4634,6 +4681,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1556308039
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556308036}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -6.5997677, y: -19.89764}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0193143, y: 1.0386505}
+  m_EdgeRadius: 0
 --- !u!95 &1600481469 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3676879364008693873, guid: 2df40c7842483af4c8e856c26e741662,

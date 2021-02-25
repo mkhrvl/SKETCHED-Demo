@@ -11,15 +11,18 @@ public class BossShoot : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    public float bulletForce = 8f;
-    public float attackInterval = 2f;
+    private float bulletForce;
+    private float attackInterval;
     private float resetInterval;
 
     void Start() {
+        bulletForce = 6f;
+        attackInterval = 0.5f;
+
         resetInterval = attackInterval;
     }
 
-    void Update() {
+    void FixedUpdate() {
         attackInterval -= Time.fixedDeltaTime; 
 
         if(attackInterval < 0f) {    // executes command after set interval

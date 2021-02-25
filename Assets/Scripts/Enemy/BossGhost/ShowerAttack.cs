@@ -11,17 +11,20 @@ public class ShowerAttack : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    public float bulletForce = 5f;
-    public float attackInterval = 1f;
+    private float bulletForce;
+    private float attackInterval;
     private float resetInterval;
 
     private bool isEven = true;
 
     void Start() {
+        bulletForce = 6f;
+        attackInterval = 0.4f;
+
         resetInterval = attackInterval;
     }
 
-    void Update() {
+    void FixedUpdate() {
         attackInterval -= Time.fixedDeltaTime; 
 
         if(attackInterval <= 0f && isEven) {    // executes command after set interval

@@ -41,6 +41,10 @@
      <Compile Include="Assets\Scripts\DataReset.cs" />
      <Compile Include="Assets\Scripts\Door\CloseDoor.cs" />
      <Compile Include="Assets\Scripts\Door\DoorController.cs" />
+     <Compile Include="Assets\Scripts\Enemy\BossAlkie\BossAlkieElectricCurtain.cs" />
+     <Compile Include="Assets\Scripts\Enemy\BossAlkie\BossAlkieInvulnerableState.cs" />
+     <Compile Include="Assets\Scripts\Enemy\BossAlkie\BossAlkieVulnerableState.cs" />
+     <Compile Include="Assets\Scripts\Enemy\BossAlkie\BossAlkieWaitingState.cs" />
      <Compile Include="Assets\Scripts\Enemy\BossGhost\BossGhostIntro.cs" />
      <Compile Include="Assets\Scripts\Enemy\BossGhost\BossGhostInvulnerableState.cs" />
      <Compile Include="Assets\Scripts\Enemy\BossGhost\BossGhostShowerAttack.cs" />
@@ -58,6 +62,8 @@
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\LevelRestriction.cs" />
      <Compile Include="Assets\Scripts\LevelRestrictionBack.cs" />
+     <Compile Include="Assets\Scripts\Menu\DeathMenu.cs" />
+     <Compile Include="Assets\Scripts\Menu\EndofDemoMenu.cs" />
      <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Menu\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\Pickup.cs" />
@@ -67,10 +73,12 @@
      <Compile Include="Assets\Scripts\Player\PlayerHandler.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerShoot.cs" />
+     <Compile Include="Assets\Scripts\PlayerFaceLeft.cs" />
      <Compile Include="Assets\Scripts\ProceedLevel.cs" />
      <Compile Include="Assets\Scripts\ProjectileCollision.cs" />
      <Compile Include="Assets\Scripts\Save and Load System\PlayerData.cs" />
      <Compile Include="Assets\Scripts\Save and Load System\SaveSystem.cs" />
+     <Compile Include="Assets\Scripts\StartFight.cs" />
      <Compile Include="Assets\Scripts\Tutorial\IgnoreBullet.cs" />
      <Compile Include="Assets\Scripts\Tutorial\IgnoreBulletTutorial.cs" />
      <Compile Include="Assets\Scripts\Tutorial\NoBullet.cs" />

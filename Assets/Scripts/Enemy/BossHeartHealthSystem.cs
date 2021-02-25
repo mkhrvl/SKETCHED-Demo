@@ -13,6 +13,14 @@ public class BossHeartHealthSystem : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    private GameObject playerUI;
+    private GameObject bossUI;
+
+    void Start() {
+        playerUI = GameObject.Find("PlayerCanvas");
+        bossUI = GameObject.Find("BossCanvas");
+    }
+
     void Update()
     {
         health = Mathf.Min(health, numOfHearts);
@@ -33,7 +41,10 @@ public class BossHeartHealthSystem : MonoBehaviour
             }
         }
         
-        if (health == 0) {
+        if (health <= 0) {
+            playerUI.SetActive(false);
+            bossUI.SetActive(false);
+
             Destroy(gameObject);
         }
     }

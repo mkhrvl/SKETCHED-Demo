@@ -27,6 +27,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Hallway2.unity
     guid: dbf4472b7f1c2d9418db1d39ed2f052c
   - enabled: 1
-    path: Assets/Scenes/Boss Fight Reference.unity
-    guid: 5614ddd127fd73341b7fa16103a601d2
+    path: Assets/Scenes/BossFight2.unity
+    guid: de8783c802a5a884680b196ac237874e
+  - enabled: 1
+    path: Assets/Scenes/Hallway3.unity
+    guid: 7be4e598b70ad4648a03b720105a9e27
+  - enabled: 1
+    path: Assets/Scenes/EndOfDemo.unity
+    guid: dcbb39f811966874e8bb243cb9401578
   m_configObjects: {}

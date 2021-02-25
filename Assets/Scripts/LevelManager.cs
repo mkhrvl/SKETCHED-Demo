@@ -31,8 +31,7 @@ public class LevelManager : MonoBehaviour
                 }
                 else if(col.CompareTag("EnterRoom")) {
                     playerHandler.Save();
-                    SceneManager.LoadScene(currentScene + 1);
-                    PlayerPrefs.SetInt("currentLevel", currentScene + 1);
+                    LoadNextScene();
                 }
                 else if (col.CompareTag("Transition")) {
                     SceneManager.LoadScene(currentScene + 2);
@@ -46,20 +45,39 @@ public class LevelManager : MonoBehaviour
                 break;
             case 4: // Hallway 1
                 if(col.CompareTag("Transition")) {
-                    SceneManager.LoadScene(currentScene + 1);
-                    PlayerPrefs.SetInt("currentLevel", currentScene + 1);
-                }
-                else if(col.CompareTag("Checkpoint")) {
-                    playerHandler.Save();
-                    PlayerPrefs.SetInt("checkPoint", currentScene);
+                    LoadNextScene();
                 }
                 break;
-            case 5: // Hallway 2
+            case 5: // Boss Fight 1
                 if(col.CompareTag("Transition")) {
-                    SceneManager.LoadScene(currentScene + 1);
-                    PlayerPrefs.SetInt("currentLevel", currentScene + 1);
+                    LoadNextScene();
+                }
+                break;
+            case 6: // Hallway 2
+                if(col.CompareTag("Transition")) {
+                    LoadNextScene();
+                }
+                break;
+            case 7: // Boss Fight 2
+                if(col.CompareTag("Transition")) {
+                    LoadNextScene();
+                }
+                break;
+            case 8: // Hallway 3
+                if(col.CompareTag("Transition")) {
+                    LoadNextScene();
                 }
                 break;
         }
+
+        if(col.CompareTag("Checkpoint")) {
+            playerHandler.Save();
+            PlayerPrefs.SetInt("checkPoint", currentScene);
+        }
+    }
+
+    void LoadNextScene() {
+        SceneManager.LoadScene(currentScene + 1);
+        PlayerPrefs.SetInt("currentLevel", currentScene + 1);
     }
 }

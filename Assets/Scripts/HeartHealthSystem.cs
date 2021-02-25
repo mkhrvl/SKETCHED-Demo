@@ -13,6 +13,8 @@ public class HeartHealthSystem : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    private bool invincible = false;
+
     void Update() {
         health = Mathf.Min(health, numOfHearts); // doesn't go over heart limit when healed
 
@@ -32,26 +34,40 @@ public class HeartHealthSystem : MonoBehaviour
             }
         }
 
-        if (health == 0) {
-            SceneManager.LoadScene(PlayerPrefs.GetInt("checkPoint")); 
-        }
+        // if (health == 0) {
+        //     SceneManager.LoadScene(PlayerPrefs.GetInt("checkPoint")); 
+        // }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.tag == "Enemy") {
-            health -= 1;
+    private void OnCollisionEnter2D(Collision2D col) {
+        if(!invincible) {
+            if(col.gameObject.tag == "Enemy") {
+                health -= 1;
+                invincible = true;
+
+                Invoke("resetInvulnerability", 2);
+            }
         }
-        else if(collision.gameObject.tag == "Potion") {
-            health += 1;
-        }
+        // else if(collision.gameObject.tag == "Potion") {
+        //     health += 1;
+        // }
     }
 
-    private void OnTriggerEnter2D(Collider2D collider) {
-        if(collider.gameObject.tag == "Potion") {
-            health += 1;
+    private void OnTriggerEnter2D(Collider2D col) {
+        if(!invincible) {
+            if(col.gameObject.tag == "Enemy") {
+                health -= 1;
+                invincible = true;
+
+                Invoke("resetInvulnerability", 2);
+            }
         }
-        else if(collider.gameObject.tag == "Enemy") {
-            health -= 1;
-        }
+        // else if(collider.gameObject.tag == "Potion") {
+        //     health += 1;
+        // }
+    }
+
+    void resetInvulnerability() {
+        invincible = false;
     }
 }
