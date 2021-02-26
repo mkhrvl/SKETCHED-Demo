@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
                 ProcessInputs();
                 AnimatePlayer();
 
-                if(Input.GetKeyDown(KeyCode.Space)) {
+                if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift)) {
                     rollDirection = lastMoveDirection;
                     rollSpeed = 15f;
                     state = State.Rolling;

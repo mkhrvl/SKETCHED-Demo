@@ -12,6 +12,8 @@ public class MainMenu : MonoBehaviour
         if(PlayerPrefs.GetInt("checkPoint") > 0) {
             contBtn.interactable = true;
         }
+
+        FindObjectOfType<SoundsController>().PlayMusic("MenuBGM");
     }
 
     public void PlayGame() {
@@ -27,6 +29,7 @@ public class MainMenu : MonoBehaviour
 
     public void ContinueGame() {
         SceneManager.LoadScene(PlayerPrefs.GetInt("checkPoint"));
+        PlayerPrefs.SetInt("EnteredScene", 1);
     }
     
     public void QuitGame() {

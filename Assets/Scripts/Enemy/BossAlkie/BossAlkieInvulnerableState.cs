@@ -15,7 +15,7 @@ public class BossAlkieInvulnerableState : StateMachineBehaviour
             shoot.GetComponent<BossAlkieElectricCurtain>().enabled = true;
         }
 
-        attackDuration = 40f;
+        attackDuration = 20f;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

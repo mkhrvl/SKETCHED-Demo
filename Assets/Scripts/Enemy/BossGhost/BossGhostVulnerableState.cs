@@ -28,6 +28,7 @@ public class BossGhostVulnerableState : StateMachineBehaviour
 
         if(hurtbox.isHurt) {
             animator.SetTrigger("Invulnerable");
+            rb.velocity = Vector3.zero;
         }
         else if (vulnerableDuration <= 0f) {
             animator.SetTrigger("Invulnerable");

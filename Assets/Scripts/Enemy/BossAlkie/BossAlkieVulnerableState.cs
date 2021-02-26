@@ -28,6 +28,7 @@ public class BossAlkieVulnerableState : StateMachineBehaviour
 
         if(hurtbox.isHurt) {
             animator.SetTrigger("Invulnerable");
+            rb.velocity = Vector3.zero;
         }
         else if (vulnerableDuration <= 0f) {
             animator.SetTrigger("Invulnerable");
@@ -36,6 +37,7 @@ public class BossAlkieVulnerableState : StateMachineBehaviour
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        rb.velocity = Vector3.zero;
         animator.ResetTrigger("Invulnerable");
         vulnerableCol.enabled = false;
     }
