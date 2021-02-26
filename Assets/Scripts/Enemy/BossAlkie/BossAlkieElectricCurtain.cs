@@ -18,8 +18,6 @@ public class BossAlkieElectricCurtain : MonoBehaviour
     private float previousNum = 0f;
     private float currentNum;
 
-    private bool isEven = true;
-
     void Start() {
         bulletForce = 3f;
         attackInterval = 1f;
@@ -34,6 +32,8 @@ public class BossAlkieElectricCurtain : MonoBehaviour
              attackInterval = resetInterval;
 
              RandomShoot();
+
+             FindObjectOfType<AudioManager>().Play("EnemyShoot");
         }
     }
 

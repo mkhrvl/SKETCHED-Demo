@@ -47,6 +47,8 @@ public class PlayerShoot : MonoBehaviour
         if(collision.gameObject.tag == "Ammo") {
             Destroy(collision.collider.gameObject);
             ammoAmount += 1;
+
+            FindObjectOfType<AudioManager>().Play("Pickup");
         }
     }
 }

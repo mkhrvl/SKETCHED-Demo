@@ -7,6 +7,12 @@ public class EndofDemoMenu : MonoBehaviour
 {
     public void ReturnToMenu() {
         SceneManager.LoadScene(0);
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("playerPosX");
+        PlayerPrefs.DeleteKey("playerPosY");
+        PlayerPrefs.DeleteKey("didSaved");
+        PlayerPrefs.DeleteKey("currentLevel");
+        PlayerPrefs.DeleteKey("tutorialComplete");
+        PlayerPrefs.DeleteKey("checkPoint");
+        PlayerPrefs.DeleteKey("EnteredScene");
     }
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class HeartHealthSystem : MonoBehaviour
 {
@@ -14,6 +13,13 @@ public class HeartHealthSystem : MonoBehaviour
     public Sprite emptyHeart;
 
     private bool invincible = false;
+    private bool played = false;
+
+    private AudioManager audioManager;
+
+    void Start() {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
 
     void Update() {
         health = Mathf.Min(health, numOfHearts); // doesn't go over heart limit when healed
@@ -34,9 +40,13 @@ public class HeartHealthSystem : MonoBehaviour
             }
         }
 
-        // if (health == 0) {
-        //     SceneManager.LoadScene(PlayerPrefs.GetInt("checkPoint")); 
-        // }
+        if(health <= 0) {           
+            if(!played) {
+                audioManager.Play("PlayerDeath");
+                played = true;
+            }
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col) {
@@ -45,12 +55,11 @@ public class HeartHealthSystem : MonoBehaviour
                 health -= 1;
                 invincible = true;
 
-                Invoke("resetInvulnerability", 2);
+                Invoke("resetInvulnerability", 1);
+
+                audioManager.Play("PlayerHurt");
             }
         }
-        // else if(collision.gameObject.tag == "Potion") {
-        //     health += 1;
-        // }
     }
 
     private void OnTriggerEnter2D(Collider2D col) {
@@ -59,12 +68,11 @@ public class HeartHealthSystem : MonoBehaviour
                 health -= 1;
                 invincible = true;
 
-                Invoke("resetInvulnerability", 2);
+                Invoke("resetInvulnerability", 1);
+
+                audioManager.Play("PlayerHurt");
             }
         }
-        // else if(collider.gameObject.tag == "Potion") {
-        //     health += 1;
-        // }
     }
 
     void resetInvulnerability() {

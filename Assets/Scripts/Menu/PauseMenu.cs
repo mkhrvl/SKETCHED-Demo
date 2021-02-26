@@ -49,6 +49,7 @@ public class PauseMenu : MonoBehaviour
     public void LoadMenu() {
         Resume();
         SceneManager.LoadScene(0);
+        FindObjectOfType<SoundsController>().PlayMusic("MenuBGM");
     }
 
     public void QuitGame() {

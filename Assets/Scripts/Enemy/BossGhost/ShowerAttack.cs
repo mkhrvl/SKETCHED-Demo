@@ -31,11 +31,15 @@ public class ShowerAttack : MonoBehaviour
              ShootEven();
              attackInterval = resetInterval;
              isEven = false;
+
+             FindObjectOfType<AudioManager>().Play("EnemyShoot");
         }
         else if(attackInterval <= 0f && isEven == false) {
             ShootOdd();
             attackInterval = resetInterval;
             isEven = true;
+
+            FindObjectOfType<AudioManager>().Play("EnemyShoot");
         }
     }
 

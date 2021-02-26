@@ -16,7 +16,13 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("playerPosX");
+        PlayerPrefs.DeleteKey("playerPosY");
+        PlayerPrefs.DeleteKey("didSaved");
+        PlayerPrefs.DeleteKey("currentLevel");
+        PlayerPrefs.DeleteKey("tutorialComplete");
+        PlayerPrefs.DeleteKey("checkPoint");
+        PlayerPrefs.DeleteKey("EnteredScene");
     }
 
     public void ContinueGame() {

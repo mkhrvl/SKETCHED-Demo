@@ -22,7 +22,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 7e84f38d723e6334e9210ca931daded9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -86,6 +86,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097151bff071b9542ab49a38a085fb87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossName: {fileID: 3402302216788660848, guid: 58f5fe2f4e8d6474eb5704f97b5ebca0,
+    type: 3}
 --- !u!114 &-1961481017813185182
 MonoBehaviour:
   m_ObjectHideFlags: 1

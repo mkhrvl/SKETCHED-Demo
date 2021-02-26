@@ -16,9 +16,15 @@ public class BossHeartHealthSystem : MonoBehaviour
     private GameObject playerUI;
     private GameObject bossUI;
 
+    private AudioManager audioManager;
+
+    private bool played = false;
+
     void Start() {
         playerUI = GameObject.Find("PlayerCanvas");
         bossUI = GameObject.Find("BossCanvas");
+
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     void Update()
@@ -46,6 +52,13 @@ public class BossHeartHealthSystem : MonoBehaviour
             bossUI.SetActive(false);
 
             Destroy(gameObject);
+            
+            audioManager.Stop("BossBGM");
+
+            if(!played) {
+                audioManager.Stop("BossDeath");
+                played = true;
+            }
         }
     }
 

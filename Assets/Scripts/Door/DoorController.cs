@@ -12,6 +12,8 @@ public class DoorController : MonoBehaviour
         if(!isOpen) {
             isOpen = true;
             animator.SetBool("isOpen", isOpen); // triggers condition to transition from close to open
+
+            FindObjectOfType<AudioManager>().Play("DoorOpen");
         }
     }
 

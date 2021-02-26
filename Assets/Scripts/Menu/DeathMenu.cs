@@ -9,8 +9,12 @@ public class DeathMenu : MonoBehaviour
     
     public GameObject deathMenuUI;
 
+    private AudioManager audioManager;
+
     void Start() {
         health = GameObject.FindGameObjectWithTag("Player").GetComponent<HeartHealthSystem>();
+
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     void Update() {
@@ -21,6 +25,9 @@ public class DeathMenu : MonoBehaviour
 
     public void RetryGame() {
         SceneManager.LoadScene(PlayerPrefs.GetInt("checkPoint"));
+        audioManager.Play("Respawn");
+        audioManager.Stop("BossBGM");
+        audioManager.Play("ExploreBGM");
     }
 
     public void LoadMenu() {

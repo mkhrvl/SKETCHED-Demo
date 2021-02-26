@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{ca494ee1-5fa6-ae2e-005a-474f560bad6b}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.PlayerPrefsEditor.Samples.SampleScene", "Unity.PlayerPrefsEditor.Samples.SampleScene.csproj", "{d978707e-3d62-7fe9-5b46-07fd84499349}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.PlayerPrefsEditor.Editor", "Unity.PlayerPrefsEditor.Editor.csproj", "{d9fdd3b6-9382-a11e-8188-7d0c95b617f4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.PlayerPrefsEditor.EditorResources", "Unity.PlayerPrefsEditor.EditorResources.csproj", "{b9d95ba6-0bea-3508-f156-10a6ce0cc64c}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -10,6 +16,12 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{ca494ee1-5fa6-ae2e-005a-474f560bad6b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ca494ee1-5fa6-ae2e-005a-474f560bad6b}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{d978707e-3d62-7fe9-5b46-07fd84499349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{d978707e-3d62-7fe9-5b46-07fd84499349}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{d9fdd3b6-9382-a11e-8188-7d0c95b617f4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{d9fdd3b6-9382-a11e-8188-7d0c95b617f4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{b9d95ba6-0bea-3508-f156-10a6ce0cc64c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{b9d95ba6-0bea-3508-f156-10a6ce0cc64c}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

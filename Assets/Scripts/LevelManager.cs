@@ -28,6 +28,8 @@ public class LevelManager : MonoBehaviour
             case 2: // Tutorial
                 if(col.CompareTag("Enemy")) {
                     SceneManager.LoadScene(currentScene);
+                    FindObjectOfType<AudioManager>().Play("PlayerDeath");
+                    FindObjectOfType<AudioManager>().Play("Respawn");
                 }
                 else if(col.CompareTag("EnterRoom")) {
                     playerHandler.Save();
@@ -40,12 +42,14 @@ public class LevelManager : MonoBehaviour
             case 3: // Tutorial Extension
                 if(col.CompareTag("ExitRoom")) {
                     PlayerPrefs.SetInt("tutorialComplete", 1);
+                    PlayerPrefs.SetInt("EnteredScene", 1);
                     SceneManager.LoadScene(currentScene - 1);
                 }
                 break;
             case 4: // Hallway 1
                 if(col.CompareTag("Transition")) {
                     LoadNextScene();
+                    PlayerPrefs.SetInt("EnteredScene", 0);
                 }
                 break;
             case 5: // Boss Fight 1

@@ -31,6 +31,8 @@ public class ProjectileTest : MonoBehaviour
             if(attackInterval < 0f) {   // executes command after set interval
                 Shoot();
                 attackInterval = resetInterval;
+
+                FindObjectOfType<AudioManager>().Play("EnemyShoot");
             } 
         }
     }

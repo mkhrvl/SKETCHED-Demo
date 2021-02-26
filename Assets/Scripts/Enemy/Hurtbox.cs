@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Hurtbox : MonoBehaviour
 {
-
     public BossHeartHealthSystem health;
 
     public bool isHurt;
@@ -13,6 +12,7 @@ public class Hurtbox : MonoBehaviour
         if(collision.gameObject.tag == "Ammo") {
             health.Hurt();
             isHurt = true;
+            FindObjectOfType<AudioManager>().Play("EnemyHurt");
         }
     }
 }

@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
                     rollDirection = lastMoveDirection;
                     rollSpeed = 15f;
                     state = State.Rolling;
+                    FindObjectOfType<AudioManager>().Play("Dash");
                 }
                 break;
 
